@@ -6,7 +6,8 @@ export default class Tile {
 	removeLayer(layer: TextureLayers) {
        		const index = this.textureLayers.indexOf(layer);
         	if (index !== -1) {
-            		this.textureLayers.splice(index, 1);
+				this.textureLayers.splice(index, 1);
+				console.log('Layer Removed', layer)
         	}
 	}
 
@@ -15,6 +16,7 @@ export default class Tile {
 			console.log(this.textureLayers, layer, this.textureLayers.indexOf(layer));
 			console.log('Layer already exists');
 		}
+		console.log('Layer Added', layer)
 		this.textureLayers.push(layer);
 	}
 

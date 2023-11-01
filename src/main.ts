@@ -3,7 +3,6 @@ import { TextureLayers } from "./tile.js";
 
 const gameboard = new Gameboard();
 
-console.log("hello world", gameboard.board);
 gameboard.generateEmptyBoard();
 gameboard.drawBoard();
 gameboard.toggleWalkable({x: 0, y: 0});
@@ -15,5 +14,3 @@ gameboard.drawBoard();
 
 gameboard.toggleWalkable({x: 0, y: 0});
 gameboard.toggleWalkable({x: 0, y: 0});
-
-

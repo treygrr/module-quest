@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TextureLayers = void 0;
-class Tile {
+export default class Tile {
     walkable;
     textureLayers;
     constructor(walkable = false, textureLayers = []) {
@@ -13,6 +10,7 @@ class Tile {
         const index = this.textureLayers.indexOf(layer);
         if (index !== -1) {
             this.textureLayers.splice(index, 1);
+            console.log('Layer Removed', layer);
         }
     }
     addLayer(layer) {
@@ -20,14 +18,14 @@ class Tile {
             console.log(this.textureLayers, layer, this.textureLayers.indexOf(layer));
             console.log('Layer already exists');
         }
+        console.log('Layer Added', layer);
         this.textureLayers.push(layer);
     }
     toggleWalkable() {
         this.walkable = !this.walkable;
     }
 }
-exports.default = Tile;
-var TextureLayers;
+export var TextureLayers;
 (function (TextureLayers) {
     TextureLayers["REDSTART"] = "REDSTART";
     TextureLayers["GREENSTART"] = "GREENSTART";
@@ -44,4 +42,4 @@ var TextureLayers;
     TextureLayers["GRASS"] = "GRASS";
     TextureLayers["PATH"] = "PATH";
     TextureLayers["STARTPOS"] = "STARTPOS";
-})(TextureLayers || (exports.TextureLayers = TextureLayers = {}));
+})(TextureLayers || (TextureLayers = {}));
