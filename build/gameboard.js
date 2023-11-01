@@ -90,6 +90,7 @@ class Gameboard {
         }
     }
     loadBoard(fileName = 'somefile') {
+        this.#board = [[]];
         const board = fs.readFileSync(fileName, { encoding: 'utf8', flag: 'r' });
         try {
             this.#board = JSON.parse(board);

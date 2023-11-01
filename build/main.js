@@ -15,3 +15,5 @@ gameboard.addLayer({ x: 0, y: 0 }, tile_js_1.TextureLayers.REDSTART);
 gameboard.saveBoard();
 gameboard.loadBoard();
 gameboard.drawBoard();
+gameboard.toggleWalkable({ x: 0, y: 0 });
+gameboard.toggleWalkable({ x: 0, y: 0 });

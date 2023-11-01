@@ -13,5 +13,7 @@ gameboard.saveBoard();
 gameboard.loadBoard();
 gameboard.drawBoard();
 
+gameboard.toggleWalkable({x: 0, y: 0});
+gameboard.toggleWalkable({x: 0, y: 0});
 
 

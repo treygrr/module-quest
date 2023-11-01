@@ -40,7 +40,7 @@ export default class Gameboard {
 		  }else {
 			  line += '0';
 		  }
-	  }
+	  }`
 	  console.log(line);
 	}
   }
@@ -74,12 +74,21 @@ export default class Gameboard {
   }
 
   loadBoard (fileName: string = 'somefile') {
+	this.#board = [[]];
 	const board = fs.readFileSync(fileName, { encoding: 'utf8', flag: 'r' });
 	try {
-		this.#board = JSON.parse(board);
+		this.#board = JSON.parse(board) as Tile[][];
 	} catch (e) {
 		console.log(e)
 	}
   }
+
+  parseBoardJSON(board: any) {
+	  Console.log("\nBeginning JSON Validation");
+	  if (!board.length && Array.isArray(board)) {
+		  for (let y = 0; y < board.length; y++) {
+			  if (board[y].length && Array.isArray(board[y]
+		  }
+	  }
 }
 
